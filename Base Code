@@ -1,0 +1,25 @@
+def Choice(options):
+    options=options.split(' ')
+    for i in range(len(options)):
+        print('> '+options[i])
+appeal=''
+def Ending(option1,option2):
+    if quantity==1:
+        return option1
+    else:
+        return option2
+while 1!=0:
+    appeal=input('Как к вам обращаться? На ты или на Вы? ').lower()
+    if appeal=='ты':
+        quantity=1
+        break
+    elif appeal=='вы':
+        while 1!=0:
+            attitude=input('Множественное число или уважительное обращение? ').lower()
+            if attitude=='уважительное обращение' or attitude=='множественное число':
+                if attitude=='уважительное обращение':
+                    appeal='Вы'
+                break
+        quantity=2
+        break
+print('В будующем '+appeal+' заинтересовал'+Ending('ся','ись')+' физикой, особенно теорией о параллельных вселенных. Наконец, через несколько лет '+appeal+' смог'+Ending('','ли')+' открыть портал в одну из них. К сожалению как только '+appeal+' вош'+Ending('ёл','ли')+' в него вы почуствовали боль в затылке и провалились в темноту. Проснул'+Ending('ся','ись')+' '+appeal+' в комнате с решётчатой дверью.')
