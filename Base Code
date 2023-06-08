@@ -2,12 +2,12 @@ def Choice(options):
     options=options.split(' ')
     for i in range(len(options)):
         print('> '+options[i])
-appeal=''
 def Ending(option1,option2):
     if quantity==1:
         return option1
     else:
         return option2
+appeal=''
 while 1!=0:
     appeal=input('Как к вам обращаться? На ты или на Вы? ').lower()
     if appeal=='ты':
