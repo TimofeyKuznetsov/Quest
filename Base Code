@@ -1,16 +1,27 @@
-def Choice(options):
+import time
+import random
+def Choice(options):#Выбор
     options=options.split(', ')
     for i in range(len(options)):
         print('> '+options[i])
         return len(options)
-def Ending(option1,option2):
+    while 1!=0:
+        choice,yes_or_no=input('Номер вашего варианта: '),0
+        for i in range(len(options)):
+            if str(i+1)==choice:
+                choice,yes_or_no=int(choice),1
+        if yes_or_no:
+            break
+    return choice
+def Ending(option1,option2):#Окончание в зависимости от числа
     if quantity==1:
-        return option1
+        return option1#Единственное число
     else:
-        return option2
-def Output(output):
-    for i in range(len(output)):
-        print()
+        return option2#Множетвенное число
+def Output(output):#Вывод который в будующем хочу выполнять по буквам
+    #for i in range(0,len(output),2):
+    #    print(output[i:i+1],end='')
+    print(output)
 appeal=''
 while 1!=0:
     appeal=input('Как к вам обращаться? На ты или на Вы? ').lower()
@@ -26,13 +37,5 @@ while 1!=0:
                 break
         quantity=2
         break
-output=f'В будующем {appeal} заинтересовал{Ending("ся","ись")} физикой, особенно теорией о параллельных вселенных. Наконец, через несколько лет {appeal} смог{Ending("","ли")} открыть портал в одну из них. К сожалению как только {appeal} вош{Ending("ёл","ли")} в него {appeal} почуствовал{Ending("","и")} боль в затылке и провалились в темноту. Проснул{Ending("ся","ись")} {appeal} в комнате с решётчатой дверью.'
-print(output)
-option_quantity=Choice('Открыть дверь')
-while 1!=0:
-    choice,yes_or_no=input('Номер вашего варианта: '),0
-    for i in range(option_quantity):
-        if str(i+1)==choice:
-            choice,yes_or_no=int(choice),1
-    if yes_or_no:
-        break
+Output(f'В будующем {appeal} заинтересовал{Ending("ся","ись")} физикой, особенно теорией о параллельных вселенных. Наконец, через несколько лет {appeal} смог{Ending("","ли")} открыть портал в одну из них. К сожалению как только {appeal} вош{Ending("ёл","ли")} в него {appeal} почуствовал{Ending("","и")} боль в затылке и провалились в темноту. Проснул{Ending("ся","ись")} {appeal} в комнате с решётчатой дверью.')
+print('> Открыть дверь')
