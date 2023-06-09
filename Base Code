@@ -4,7 +4,6 @@ def Choice(options):#Выбор
     options=options.split(', ')
     for i in range(len(options)):
         print('> '+options[i])
-        return len(options)
     while 1!=0:
         choice,yes_or_no=input('Номер вашего варианта: '),0
         for i in range(len(options)):
@@ -38,4 +37,8 @@ while 1!=0:
         quantity=2
         break
 Output(f'В будующем {appeal} заинтересовал{Ending("ся","ись")} физикой, особенно теорией о параллельных вселенных. Наконец, через несколько лет {appeal} смог{Ending("","ли")} открыть портал в одну из них. К сожалению как только {appeal} вош{Ending("ёл","ли")} в него {appeal} почуствовал{Ending("","и")} боль в затылке и провалились в темноту. Проснул{Ending("ся","ись")} {appeal} в комнате с решётчатой дверью.')
-print('> Открыть дверь')
+Choice('> Открыть дверь')
+Output(f'{appeal.capitalize()} выш{Ending("ел","ли")} в коридор. Слева вы видите ещё камеры заточения, идущие до конца коридора, а справа из-за угла коридора льется сонечный свет.')
+if Choice('Пойти налево, Пойти направо')==1:
+    if random.randint()
+    Output()
