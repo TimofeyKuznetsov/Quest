@@ -1,13 +1,5 @@
 import time
 import random
-def print_hor(print_hor = str(), sec2 = int()):
-  for j in print_hor:
-    time.sleep(sec2) 
-    print(j, end = "")
-print_hor( 'Привет', 1 )
-print()
-
-
 def Choice(options):#Выбор
     options=options.split(', ')
     for i in range(len(options)):
@@ -59,3 +51,4 @@ if Choice('Пойти налево','Пойти направо')==1:
         Output(f'Пройдя налево {appeal} вид{Ending("ишь","ите")} в камере старика.')
         if Choice('Разбудить его','Не будить')==1:
             Output(f'Он просыпается -"Кто ты такой и почему на свободе?"')
+            Choice('Рассказать правду','Солгать')
