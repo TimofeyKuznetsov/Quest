@@ -1,5 +1,13 @@
 import time
 import random
+def print_hor(print_hor = str(), sec2 = int()):
+  for j in print_hor:
+    time.sleep(sec2) 
+    print(j, end = "")
+print_hor( 'Привет', 1 )
+print()
+
+
 def Choice(options):#Выбор
     options=options.split(', ')
     for i in range(len(options)):
@@ -19,13 +27,13 @@ def Ending(option1,option2):#Окончание глагола в зависим
     else:
         return option2#Множетвенное число или уважительное обращение
 def DopOutput(output,i):
-    time.sleep(0.2)
-    return output[i]
+    print(output[i],end='')
 def Output(output):#Вывод который в будующем хочу выполнять по буквам
     output=list(output)
-    for i in range(len(output)):
-        print(DopOutput(output,i),end='')
-    #print(output)
+    for i in range(0,len(output),2):
+        time.sleep(0.1)
+        DopOutput(output,i)
+    print(output)
 #appeal=''
 #while 1!=0:
 #    appeal=input('Как к вам обращаться? На ты или на Вы? ').lower()
