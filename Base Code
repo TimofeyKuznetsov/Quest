@@ -18,12 +18,14 @@ def Ending(option1,option2):#Окончание глагола в зависим
         return option1#Единственное число
     else:
         return option2#Множетвенное число или уважительное обращение
+def DopOutput(output,i):
+    time.sleep(0.2)
+    return output[i]
 def Output(output):#Вывод который в будующем хочу выполнять по буквам
-    #output=list(output)
-    #for i in range(0,len(output),2):
-    #    print(output[i:i+1],end='')
-    #    time.sleep(1)
-    print(output)
+    output=list(output)
+    for i in range(len(output)):
+        print(DopOutput(output,i),end='')
+    #print(output)
 #appeal=''
 #while 1!=0:
 #    appeal=input('Как к вам обращаться? На ты или на Вы? ').lower()
